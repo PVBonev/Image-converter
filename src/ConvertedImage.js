@@ -1,5 +1,5 @@
-// ConvertedImage.js
 import React, { useEffect, useState } from 'react';
+import './Button.css';
 import { useNavigate } from 'react-router-dom';
 
 function ConvertedImage({ filter, selectedImage }) {
@@ -28,13 +28,14 @@ function ConvertedImage({ filter, selectedImage }) {
     return (
         <div className="MainPage">
             <header className="App-header">
-                <h1>Converted Image</h1>
-                
-                <img src={downloadUrl} alt="Converted" />
+                <h1>Converted Image</h1>                
+                <img className="converted-image" src={downloadUrl} alt="Converted" />                
+                <div className="button-container">
                 <a href={downloadUrl} download={`${filter}_image.jpg`}>
-                    <button>Download</button>
-                </a>
-                <button onClick={goBack}>Go Back</button>
+                        <button className="button-white">Download</button>
+                    </a>
+                    <button className="button-white" onClick={goBack}>Go Back</button>
+                </div>
             </header>
         </div>
     );

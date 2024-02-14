@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
+import appLogo from './AP-logo.svg';
 import './App.css';
+import './Button.css';
+import './Filter.css';
 import Upload from './components/Upload';
 import { useNavigate } from 'react-router-dom';
 
@@ -28,34 +30,22 @@ function MainPage() {
   return (
     <div className="MainPage">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={appLogo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Sasho and Pecata's Image Converter
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <p>Upload image</p>
-        
+                
         <Upload onUpload={handleImageUpload} />
 
-        <br />
 
-        <select value={filter} onChange={handleFilterChange}>
+        <select className="styled-select" value={filter} onChange={handleFilterChange}>
           <option value="grayscale">Gray Scale</option>
           <option value="invert">Inverted Color</option>
           <option value="monochrome">Monochrome</option>
           <option value="gaussian">Gaussian Blur</option>
         </select>
-
-        <br />
         
-        <button onClick={() => navigate(`/${filterToPath[filter]}Image`)}>Get Converted Image</button>
+        <button className="button-black" onClick={() => navigate(`/${filterToPath[filter]}Image`)}>Get Converted Image</button>
     
       </header>
     </div>

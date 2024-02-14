@@ -1,0 +1,20 @@
+.styled-select {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px 15px;
+    font-size: 16px;
+    border-radius: 12px;
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    cursor: pointer;
+    transition-duration: 0.4s;
+    width: fit-content;
+    margin: 20px;
+}
+
+.styled-select:hover {
+    background-color: white;
+    color: black;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../../Upload.css";
 
 class Upload extends React.Component {
     constructor(props) {
@@ -10,6 +11,10 @@ class Upload extends React.Component {
     }
 
     async handleChange(event) {
+        this.setState({
+            fileSelected: true
+        });
+
         if (this.props.file !== null) {
             URL.revokeObjectURL(this.props.file);
         }
@@ -57,10 +62,13 @@ class Upload extends React.Component {
     render() {
         return (
             <div>
-                <input type="file" onChange={this.handleChange} />
-                <br />
-                { this.props.file && <img src={this.props.file} alt="jeye"/> }
-            </div>
+            <input type="file" id="file" className="file-input" onChange={this.handleChange} />
+            <label htmlFor="file" className={this.state.fileSelected ? "file-label-selected" : "file-label"}>
+                {this.state.fileSelected ? "Picture Selected" : "Select a Picture"}
+            </label>
+            <br />
+            { this.props.file && <img src={this.props.file} alt="jeye"/> }
+        </div>
         );
     }
 }
