@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import MainPage from './MainPage';
-import ConvertedImage from './ConvertedImage'; // Import your ConvertedImage component
+import MainPage from './components/MainPage';
+import ConvertedImage from './components/ConvertedImage'; // Import your ConvertedImage component
 
 function App() {
   return (

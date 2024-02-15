@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import appLogo from './AP-logo.svg';
-import './App.css';
-import './Button.css';
-import './Filter.css';
-import Upload from './components/Upload';
+import appLogo from '../AP-logo.svg';
+import '../styling/App.css';
+import '../styling/Button.css';
+import '../styling/Filter.css';
+import Upload from './Upload.js';
 import { useNavigate } from 'react-router-dom';
 
 function MainPage() {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Button.css';
+import '../styling/Button.css';
 import { useNavigate } from 'react-router-dom';
 
 function ConvertedImage({ filter, selectedImage }) {
