@@ -136,6 +136,10 @@ def index():
         return Response("Selected grayscale conversion", status=200)
     elif filter == 'invert':
         return Response("Selected inverted conversion", status=200)
+    elif filter == 'gaussian':
+        return Response("Selected Gaussian blur", status=200)
+    elif filter == 'monochrome':
+        return Response("Selected monochrome conversion", status=200)
     else:
         return Response("Invalid filter", status=400)
 
